@@ -9,8 +9,8 @@
    - 仕事だと Windows 関連（VC++ とか SQL Server）の開発が多いです。Web の知識には疎いです。
 
  - 趣味：
-   - 色んな言語で「Hello, World!」を書くこと（http://cx20.main.jp/blog/hello/language-table/）
-   - 最近は色んな WebGL ライブラリを試すことを趣味にしています（http://qiita.com/cx20/items/0fa19c96aa6470d98807）
+   - 色んな言語で「Hello, World!」を書くこと（http://cx20.main.jp/blog/hello/language-table/ ）
+   - 最近は色んな WebGL ライブラリを試すことを趣味にしています（http://qiita.com/cx20/items/0fa19c96aa6470d98807 ）
 
  - その他:
    - あまり公言してませんがと Microsoft MVP をやっています。
