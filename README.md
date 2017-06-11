@@ -30,7 +30,7 @@
 - Grimoire.js だけでなく Three.js や Babylon.js といった他の WebGL サンプルもありますので興味のある方はどうぞ。
 
 1. Google より「WebGL」「ライブラリ比較」で検索。
-   http://qiita.com/cx20/items/0fa19c96aa6470d98807
+- http://qiita.com/cx20/items/0fa19c96aa6470d98807
   - 各種 WebGL ライブラリによる基本図形の描画サンプルになります。
   - 各ライブラリ毎に「三角形」「四角形」「立方体」「テクスチャ付き立方体」のサンプルを用意しています。
 
@@ -40,22 +40,22 @@
   - 今回は、お気楽コースとして「プリミティブ図形」のサンプルを使用したいと思います。
 
 3. 「Grimoire.js」の「プリミティブ図形」サンプルのうち「三角形」のサンプルを表示します。
-    ■ [WebGL] Grimoire.js を試してみるテスト
-    http://jsdo.it/cx20/4ZEB
+-  [WebGL] Grimoire.js を試してみるテスト
+  - http://jsdo.it/cx20/4ZEB
 
 4. 「Fork」ボタンをクリックすると新しい作品ができます。
 
 5. 試しに色を変えてみます。
   - material の color="#00f" を "#f00" にすると色が「青」→「赤」に変わります。
 
-## サッカーボールのサンプルをベースに地球のサンプルを作成する方法＞
+## サッカーボールのサンプルをベースに地球のサンプルを作成する方法
 1. サッカーボールのサンプルを表示する
-   [WebGL] Grimoire.js でサッカーボールを表示させてみるテスト
-   http://jsdo.it/cx20/qgAL
+-  [WebGL] Grimoire.js でサッカーボールを表示させてみるテスト
+  - http://jsdo.it/cx20/qgAL
 
 2. Fork ボタンをクリックし新しい作品を作成
-   [WebGL] Grimoire.js で地球を表示させてみるテスト
-   http://jsdo.it/cx20/Iwed
+- [WebGL] Grimoire.js で地球を表示させてみるテスト
+  - http://jsdo.it/cx20/Iwed
    
 - 変更点
   - カメラの位置を調整
