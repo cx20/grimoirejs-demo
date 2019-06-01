@@ -13,3 +13,9 @@
 ### 複数カメラの設置
 
 [![Grimoire.js でカメラを２つ使ってみるテスト](assets/screenshot/Kqig.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/Kqig/)
+
+### PBR
+
+[![Grimoire.js で地球を照らしてみるテスト](assets/screenshot/89C8.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/89C8/)
+
+[![Grimoire.js で PBR を試してみるテスト](assets/screenshot/ATDR.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/ATDR/)
