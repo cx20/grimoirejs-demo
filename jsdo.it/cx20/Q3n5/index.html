@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Grimoire.js + Effekseer を試してみるテスト</title>
+<meta name="Description" content="" />
+<meta name="Keywords"  content="" />
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="style.css" />
+</head>
+<body>
+
+<script src="https://unpkg.com/grimoirejs-preset-basic@1.9.31/register/grimoire-preset-basic.js"></script>
+<script src="https://cdn.rawgit.com/effekseer/EffekseerForWebGL/42f8bc69/Release/effekseer.min.js"></script>
+
+<script type="text/sort" id="shader">
+@Pass{
+    @DepthFunc(LEQUAL)
+    @BlendFunc(SRC_ALPHA,ONE_MINUS_SRC_ALPHA)
+    @CullFace(BACK)
+
+    FS_PREC(mediump,float)
+
+    varying vec2 vTexCoord;
+    varying vec3 vNormal;
+
+    #ifdef VS
+      attribute vec3 position;
+      attribute vec3 normal;
+      attribute vec2 texCoord;
+      uniform mat4 _matPVM;
+      uniform mat4 _matM;
+      void main(){
+        gl_Position = _matPVM * vec4(position, 1.);
+        vTexCoord = texCoord;
+        vNormal = (_matM * vec4(normal, 0.)).xyz;
+      }
+    #endif
+
+    #ifdef FS
+      @{usedFlag:"_textureUsed"}
+      uniform sampler2D texture;
+      uniform bool _textureUsed;
+      @{type:"color", default:"#6E183D"}
+      uniform vec4 color;
+      @{type:"vec3", default:"n(1,1,1)"}
+      uniform vec3 sun;
+      void main(){
+        vec3 diffuse = max(dot(vNormal, -1. * sun), 0.3) * color.rgb;
+        if (_textureUsed) {
+          diffuse = diffuse * texture2D(texture, vTexCoord).rgb;
+        }
+        gl_FragColor = vec4(diffuse, 1.0);
+      }
+    #endif
+}
+</script>
+
+<script type="text/goml" id="canvas1">
+  <goml width="fit" height="fit" bgColor="gray">
+    <renderer camera="camera">
+      <render-scene/>
+      <render-effekseer/>
+    </renderer>
+    <!-- <import-material typeName="lambert" src="lambert.txt" /> -->
+    <material id="red"   type="lambert" color="#f00" sun="n(1,-1.1,-10)" />
+    <material id="green" type="lambert" color="#0f0" sun="n(1,-1.1,-10)" />
+    <material id="blue"  type="lambert" color="#00f" sun="n(1,-1.1,-10)" />
+    <scene>
+      <camera position="5,5,10">
+        <camera.components>
+          <MouseCameraControl/>
+        </camera.components>
+      </camera>
+      <object id="group">
+        <rotated-mesh material="#blue" position="-3,0,0" geometry="cube"/>
+        <rotated-mesh material="#red" position="0,3,0" geometry="cube" speed="2"/>
+        <rotated-mesh material="#green" position="3,0,0" geometry="cube" speed="3"/>
+        <efk id="Laser01" src="https://cdn.rawgit.com/effekseer/EffekseerForWebGL/7a1b035c/Release/Sample/Resource/Laser01.efk" play="false"/>
+        <efk id="Laser02" src="https://cdn.rawgit.com/effekseer/EffekseerForWebGL/7a1b035c/Release/Sample/Resource/Laser02.efk" play="false"/>
+        <efk id="Simple_Ring_Shape1" src="https://cdn.rawgit.com/effekseer/EffekseerForWebGL/7a1b035c/Release/Sample/Resource/Simple_Ring_Shape1.efk" play="false"/>
+        <efk id="block" src="https://cdn.rawgit.com/effekseer/EffekseerForWebGL/7a1b035c/Release/Sample/Resource/block.efk" play="false"/>
+      </object>
+    </scene>
+  </goml>
+</script>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
