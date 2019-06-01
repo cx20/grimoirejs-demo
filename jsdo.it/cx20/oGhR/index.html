@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Grimoire.js で glTF 2.0形式のデータを表示してみるテスト（その７）</title>
+<meta name="Description" content="" />
+<meta name="Keywords"  content="" />
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="style.css" />
+</head>
+<body>
+<script src="https://unpkg.com/grimoirejs-preset-basic@1.11.9/register/grimoire-preset-basic.js"></script>
+<script src="https://unpkg.com/grimoirejs-animation@1.2.0/register/grimoire-animation.js"></script>
+<script src="https://unpkg.com/grimoirejs-forward-shading@1.9.1/register/grimoire-forward-shading.js"></script>
+<script src="https://unpkg.com/grimoirejs-gltf@2.2.6/register/grimoire-gltf.js"></script>
+
+<script type="text/goml" id="canvas">
+<goml width="fit" height="fit" bgColor="gray">
+  <renderer>
+    <texture-buffer name="bb1"/>
+    <render-scene/>
+  </renderer>
+    <scene>
+      <camera class="camera" near="0.01" far="1000.0" fovy="45d" position="0,0,3">
+        <camera.components>
+          <MouseCameraControl center = "0"/>
+        </camera.components>
+      </camera>
+      <!-- <model src="https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/c89c1709fbfd67a11aa7e540ab4ecb795763b627/2.0/MetalRoughSpheres/glTF/MetalRoughSpheres.gltf" /> -->
+      <model src="https://raw.githubusercontent.com/shrekshao/minimal-gltf-loader/store-drone-model/glTFs/glTF_version_2/buster_drone/scene.gltf" />
+      <light type="directional" rotation="0d,30,0d" color="white" intensity="1"/>
+    </scene>
+</goml>
+</script>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
