@@ -30,3 +30,8 @@
 ### Effekseer
 
 [![Grimoire.js + Effekseer を試してみるテスト](assets/screenshot/Q3n5.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/Q3n5/)
+
+### Draco 形式ファイル
+
+[![Grimoire.js で Draco 形式のファイルを読み込んでみるテスト](assets/screenshot/UOJ0.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/UOJ0/)
+
