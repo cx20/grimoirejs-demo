@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Grimoire.js で地球を照らしてみるテスト</title>
+<meta name="Description" content="" />
+<meta name="Keywords"  content="" />
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="style.css" />
+</head>
+<body>
+<script src="https://unpkg.com/grimoirejs-preset-basic@1.11.20/register/grimoire-preset-basic.js"></script>
+<script src="https://unpkg.com/grimoirejs-forward-shading@1.10.2/register/grimoire-forward-shading.js"></script>
+
+<script type="text/goml" id="canvas">
+<goml width="fit" height="fit">
+  <scene>
+    <camera class="camera" position="0,0,6.5">
+      <camera.components>
+        <MouseCameraControl/>
+      </camera.components>
+    </camera>
+    <!-- 
+        [Metal]
+           ↑
+           ↓
+        [Non-metal]  [Smooth]←→[Rough]
+    -->
+    <mesh id="sphere" position="-2.0,+2.0, 0.0" geometry="sphere" scale="0.5" roughness="0.00" metallic="1.00" albedo="#ffffff" />
+    <mesh id="sphere" position="-1.0,+2.0, 0.0" geometry="sphere" scale="0.5" roughness="0.25" metallic="1.00" albedo="#ffffff" />
+    <mesh id="sphere" position=" 0.0,+2.0, 0.0" geometry="sphere" scale="0.5" roughness="0.50" metallic="1.00" albedo="#ffffff" />
+    <mesh id="sphere" position="+1.0,+2.0, 0.0" geometry="sphere" scale="0.5" roughness="0.75" metallic="1.00" albedo="#ffffff" />
+    <mesh id="sphere" position="+2.0,+2.0, 0.0" geometry="sphere" scale="0.5" roughness="1.00" metallic="1.00" albedo="#ffffff" />
+
+    <mesh id="sphere" position="-2.0,+1.0, 0.0" geometry="sphere" scale="0.5" roughness="0.00" metallic="0.75" albedo="#ffffff" />
+    <mesh id="sphere" position="-1.0,+1.0, 0.0" geometry="sphere" scale="0.5" roughness="0.25" metallic="0.75" albedo="#ffffff" />
+    <mesh id="sphere" position=" 0.0,+1.0, 0.0" geometry="sphere" scale="0.5" roughness="0.50" metallic="0.75" albedo="#ffffff" />
+    <mesh id="sphere" position="+1.0,+1.0, 0.0" geometry="sphere" scale="0.5" roughness="0.75" metallic="0.75" albedo="#ffffff" />
+    <mesh id="sphere" position="+2.0,+1.0, 0.0" geometry="sphere" scale="0.5" roughness="1.00" metallic="0.75" albedo="#ffffff" />
+
+    <mesh id="sphere" position="-2.0, 0.0, 0.0" geometry="sphere" scale="0.5" roughness="0.00" metallic="0.50" albedo="#ffffff" />
+    <mesh id="sphere" position="-1.0, 0.0, 0.0" geometry="sphere" scale="0.5" roughness="0.25" metallic="0.50" albedo="#ffffff" />
+    <mesh id="sphere" position=" 0.0, 0.0, 0.0" geometry="sphere" scale="0.5" roughness="0.50" metallic="0.50" albedo="#ffffff" />
+    <mesh id="sphere" position="+1.0, 0.0, 0.0" geometry="sphere" scale="0.5" roughness="0.75" metallic="0.50" albedo="#ffffff" />
+    <mesh id="sphere" position="+2.0, 0.0, 0.0" geometry="sphere" scale="0.5" roughness="1.00" metallic="0.50" albedo="#ffffff" />
+
+    <mesh id="sphere" position="-2.0,-1.0, 0.0" geometry="sphere" scale="0.5" roughness="0.00" metallic="0.25" albedo="#ffffff" />
+    <mesh id="sphere" position="-1.0,-1.0, 0.0" geometry="sphere" scale="0.5" roughness="0.25" metallic="0.25" albedo="#ffffff" />
+    <mesh id="sphere" position=" 0.0,-1.0, 0.0" geometry="sphere" scale="0.5" roughness="0.50" metallic="0.25" albedo="#ffffff" />
+    <mesh id="sphere" position="+1.0,-1.0, 0.0" geometry="sphere" scale="0.5" roughness="0.75" metallic="0.25" albedo="#ffffff" />
+    <mesh id="sphere" position="+2.0,-1.0, 0.0" geometry="sphere" scale="0.5" roughness="1.00" metallic="0.25" albedo="#ffffff" />
+
+    <mesh id="sphere" position="-2.0,-2.0, 0.0" geometry="sphere" scale="0.5" roughness="0.00" metallic="0.00" albedo="#ffffff" />
+    <mesh id="sphere" position="-1.0,-2.0, 0.0" geometry="sphere" scale="0.5" roughness="0.25" metallic="0.00" albedo="#ffffff" />
+    <mesh id="sphere" position=" 0.0,-2.0, 0.0" geometry="sphere" scale="0.5" roughness="0.50" metallic="0.00" albedo="#ffffff" />
+    <mesh id="sphere" position="+1.0,-2.0, 0.0" geometry="sphere" scale="0.5" roughness="0.75" metallic="0.00" albedo="#ffffff" />
+    <mesh id="sphere" position="+2.0,-2.0, 0.0" geometry="sphere" scale="0.5" roughness="1.00" metallic="0.00" albedo="#ffffff" />
+
+    <light type="directional" rotation="0d,0d,0d" color="white" intensity="1.0"/>
+</scene>
+</goml>
+</script>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
