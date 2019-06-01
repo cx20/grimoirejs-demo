@@ -1,15 +1,15 @@
-### ƒVƒF[ƒ_ƒ^ƒO
+ï»¿### ã‚·ã‚§ãƒ¼ãƒ€ã‚¿ã‚°
 
-[![Grimoire.js ‚Å‹…‘Ì‚ÉƒGƒtƒFƒNƒg‚ğ‚©‚¯‚Ä‚İ‚éƒeƒXƒg](assets/screenshot/eRe9.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/eRe9/)
+[![Grimoire.js ã§çƒä½“ã«ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã‚’ã‹ã‘ã¦ã¿ã‚‹ãƒ†ã‚¹ãƒˆ](assets/screenshot/eRe9.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/eRe9/)
 
-[![Grimoire.js ‚Å‘¾—z‚ğ•\¦‚³‚¹‚Ä‚İ‚éƒeƒXƒg](assets/screenshot/chhM.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/chhM/)
+[![Grimoire.js ã§å¤ªé™½ã‚’è¡¨ç¤ºã•ã›ã¦ã¿ã‚‹ãƒ†ã‚¹ãƒˆ](assets/screenshot/chhM.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/chhM/)
 
-[![Grimoire.js ‚Å³‰ğ‚·‚éƒJƒh‚Á‚Û‚¢‚à‚Ì‚ğ•\Œ»‚µ‚Ä‚İ‚éƒeƒXƒg](assets/screenshot/4EztL.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/4EztL/)
+[![Grimoire.js ã§æ­£è§£ã™ã‚‹ã‚«ãƒ‰ã£ã½ã„ã‚‚ã®ã‚’è¡¨ç¾ã—ã¦ã¿ã‚‹ãƒ†ã‚¹ãƒˆ](assets/screenshot/4EztL.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/4EztL/)
 
-### ƒCƒ“ƒXƒ^ƒ“ƒVƒ“ƒO
+### ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚·ãƒ³ã‚°
 
-[![ Grimoire.js ‚ÅƒCƒ“ƒXƒ^ƒ“ƒVƒ“ƒO‹@”\‚ğg‚Á‚Ä‚İ‚éƒeƒXƒg](assets/screenshot/u3rD.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/u3rD/)
+[![ Grimoire.js ã§ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚·ãƒ³ã‚°æ©Ÿèƒ½ã‚’ä½¿ã£ã¦ã¿ã‚‹ãƒ†ã‚¹ãƒˆ](assets/screenshot/u3rD.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/u3rD/)
 
-### •¡”ƒJƒƒ‰‚Ìİ’u
+### è¤‡æ•°ã‚«ãƒ¡ãƒ©ã®è¨­ç½®
 
-[![Grimoire.js ‚ÅƒJƒƒ‰‚ğ‚Q‚Âg‚Á‚Ä‚İ‚éƒeƒXƒg](assets/screenshot/Kqig.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/Kqig/)
+[![Grimoire.js ã§ã‚«ãƒ¡ãƒ©ã‚’ï¼’ã¤ä½¿ã£ã¦ã¿ã‚‹ãƒ†ã‚¹ãƒˆ](assets/screenshot/Kqig.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/Kqig/)
