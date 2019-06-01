@@ -19,3 +19,9 @@
 [![Grimoire.js で地球を照らしてみるテスト](assets/screenshot/89C8.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/89C8/)
 
 [![Grimoire.js で PBR を試してみるテスト](assets/screenshot/ATDR.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/ATDR/)
+
+### glTF 2.0
+
+[![Grimoire.js で glTF 2.0形式のデータを表示してみるテスト（その６）](assets/screenshot/Qurl.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/Qurl/)
+
+[![Grimoire.js で glTF 2.0形式のデータを表示してみるテスト（その７）](assets/screenshot/oGhR.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/oGhR/)
