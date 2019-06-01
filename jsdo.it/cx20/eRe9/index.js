@@ -1,4 +1,4 @@
-var Vector3 = gr.lib.math.Vector3;
+ï»¿var Vector3 = gr.lib.math.Vector3;
 var Quaternion = gr.lib.math.Quaternion;
 
 gr.registerComponent('Rotate', {
@@ -13,10 +13,10 @@ gr.registerComponent('Rotate', {
   },
   $update: function () {
     this.phi += this.getAttribute('speed');
-    // ƒIƒCƒ‰[Šp‚É‚æ‚é‰ñ“]
+    // ã‚ªã‚¤ãƒ©ãƒ¼è§’ã«ã‚ˆã‚‹å›è»¢
     //this.node.setAttribute('rotation', this.phi + ',' + this.phi + ',' + 0);
     
-    // ƒNƒH[ƒ^ƒjƒIƒ“‚É‚æ‚é‰ñ“]
+    // ã‚¯ã‚©ãƒ¼ã‚¿ãƒ‹ã‚ªãƒ³ã«ã‚ˆã‚‹å›è»¢
     var axis = new Vector3(0, 1, 0);
     var angle = this.phi * Math.PI / 180;
     var q = Quaternion.angleAxis(angle, axis);

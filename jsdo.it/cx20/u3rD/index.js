@@ -1,4 +1,4 @@
-var GeometryFactory = gr.lib.fundamental.Geometry.GeometryFactory;
+Ôªøvar GeometryFactory = gr.lib.fundamental.Geometry.GeometryFactory;
 var Geometry = gr.lib.fundamental.Geometry.Geometry;
 GeometryFactory.addType("cube2", {}, (gl) => {
   const geometry = new Geometry(gl);
@@ -117,7 +117,7 @@ var Base64 = {
 var shader = document.getElementById("shader").textContent;
 var encodeString = Base64.encode(shader);
 var ASSETS = {};
-ASSETS['index.sort'] = "data:;base64," + encodeString; // ÉVÉFÅ[É_Ç DataURI Ç∆ÇµÇƒäiî[
+ASSETS['index.sort'] = "data:;base64," + encodeString; // „Ç∑„Çß„Éº„ÉÄ„Çí DataURI „Å®„Åó„Å¶Ê†ºÁ¥ç
 
 //--------------------------------------
 // Index.js
