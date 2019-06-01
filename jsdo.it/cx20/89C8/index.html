@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Grimoire.js で地球を照らしてみるテスト</title>
+<meta name="Description" content="" />
+<meta name="Keywords"  content="" />
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="style.css" />
+</head>
+<body>
+<script src="https://unpkg.com/grimoirejs-preset-basic@1.11.15/register/grimoire-preset-basic.js"></script>
+<script src="https://unpkg.com/grimoirejs-forward-shading@1.10.1/register/grimoire-forward-shading.js"></script>
+
+<script type="text/goml" id="canvas">
+<goml width="fit" height="fit">
+  <scene>
+    <camera class="camera" position="0,0,3">
+      <camera.components>
+        <MouseCameraControl/>
+      </camera.components>
+    </camera>
+    <mesh id="earth" position="0,0,0" geometry="sphere" scale="1.00" texture="earth.jpg"/> <!-- earth.jpg -->
+    <mesh id="cloud" position="0,0,0" geometry="sphere" scale="1.01" texture="cloud.png"/> <!-- cloud.png -->
+    <light type="directional" rotation="0d,45d,0d" color="white" intensity="3.0"/>
+  </scene>
+</goml>
+</script>
+
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
