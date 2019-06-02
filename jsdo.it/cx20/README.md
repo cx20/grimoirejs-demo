@@ -39,4 +39,6 @@
 
 ### 物理演算
 
+[![Grimoire.js で Oimo.js を試してみるテスト（その４改）](assets/screenshot/sRhd.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/sRhd/)
+
 [![Grimoire.js + Oimo.js で箱にボールを入れてみるテスト](assets/screenshot/0fsp.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/0fsp/)
