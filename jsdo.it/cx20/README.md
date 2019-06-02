@@ -35,3 +35,6 @@
 
 [![Grimoire.js で Draco 形式のファイルを読み込んでみるテスト](assets/screenshot/UOJ0.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/UOJ0/)
 
+### 物理演算
+
+[![Grimoire.js + Oimo.js で箱にボールを入れてみるテスト](assets/screenshot/0fsp.jpg)](https://cx20.github.io/grimoirejs-demo/jsdo.it/cx20/0fsp/)
