@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>ジャイロセンサーを試してみるテスト（その５改）</title>
+<meta name="Description" content="" />
+<meta name="Keywords"  content="" />
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="style.css" />
+</head>
+<body>
+<script src="https://unpkg.com/grimoirejs-version-switcher"></script>
+<script as="grimoirejs"></script>
+<script as="math"></script>
+<script as="fundamental"></script>
+<script as="forward-shading"></script>
+
+<script type="text/sort" id="shader" typeName="shader">
+@Pass{
+FS_PREC(highp,float)
+@BlendFunc(ONE,ZERO)
+@import "screen-vert"
+
+#ifdef FS
+  // forked from http://glslsandbox.com/e#8143.0
+  uniform vec2 mouse;
+  uniform float _time;
+  #define time _time/1000.0
+  uniform vec2 _viewportSize;
+  #define resolution _viewportSize
+  uniform sampler2D backbuffer;
+
+  const int   complexity      = 40;    // More points of color.
+  const float mouse_factor    = 25.0;  // Makes it more/less jumpy.
+  const float mouse_offset    = 5.0;   // Drives complexity in the amount of curls/cuves.  Zero is a single whirlpool.
+  const float fluid_speed     = 4.0;  // Drives speed, higher number will make it slower.
+  const float color_intensity = 0.7;
+
+  const float Pi = 3.14159;
+
+  float sinApprox(float x) {
+      x = Pi + (2.0 * Pi) * floor(x / (2.0 * Pi)) - x;
+      return (4.0 / Pi) * x - (4.0 / Pi / Pi) * x * abs(x);
+  }
+
+  float cosApprox(float x) {
+      return sinApprox(x + 0.5 * Pi);
+  }
+
+  void main()
+  {
+    vec2 p=(2.0*gl_FragCoord.xy-resolution)/max(resolution.x,resolution.y);
+    for(int i=1;i<complexity;i++)
+    {
+      vec2 newp=p;
+      newp.x+=0.6/float(i)*sin(float(i)*p.y+time/fluid_speed+0.3*float(i))+mouse.y/mouse_factor+mouse_offset;
+      newp.y+=0.6/float(i)*sin(float(i)*p.x+time/fluid_speed+0.3*float(i+10))-mouse.x/mouse_factor+mouse_offset;
+      p=newp;
+    }
+    vec3 col=vec3(color_intensity*sin(3.0*p.x)+color_intensity,color_intensity*sin(3.0*p.y)+color_intensity,sin(p.x+p.y));
+    gl_FragColor=vec4(col, 1.0);
+  }
+#endif
+}
+</script>
+<script type="text/goml" id="canvas">
+<goml width="fit" height="fit">
+    <renderer viewport="0,0,100%,100%">
+        <rendering-target name="paintTarget" resizerType="Constant" resolution="1024,1024"/>
+        <rendering-target name="paintTargetCopy" resizerType="Constant" resolution="1024,1024"/>
+        <render-quad id="renderCanvas" material="new(shader)" backbuffer="backbuffer(paintTargetCopy)" out="paintTarget" clearColorEnabled="false"/>
+        <render-quad material="new(unlit)" texture="backbuffer(paintTarget)" out="paintTargetCopy" clearColorEnabled="false"/>
+        <render-quad material="new(unlit)" texture="backbuffer(paintTarget)"/>
+    </renderer>
+</goml>
+</script>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
